@@ -1,0 +1,100 @@
+# config
+config defaultToCurrentScreen true
+config windowHintsShowIcons true
+config windowHintsIgnoreHiddenWindows false 
+config windowHintsDuration 6
+config windowHintsSpread true
+
+# misc bind
+bind ':ctrl;alt;cmd hint HJKLYUIOPBNM
+bind /:ctrl;alt;cmd grid padding:1 0:24,15
+
+# base aliases
+alias yo screenOriginY
+alias ys screenSizeY
+alias xo screenOriginX
+alias xs screenSizeX
+
+alias yp05 ${yo}+${ys}*.05
+alias yp1 ${yo}+${ys}*.1
+alias yp15 ${yo}+${ys}*.15
+alias yp2 ${yo}+${ys}*.2
+alias yp3 ${yo}+${ys}*.3
+alias yp5 ${yo}+${ys}*.5
+
+alias xp05 ${xo}+${xs}*.05
+alias xp1 ${xo}+${xs}*.1
+alias xp15 ${xo}+${xs}*.15
+alias xp2 ${xo}+${xs}*.2
+alias xp3 ${xo}+${xs}*.3
+alias xp5 ${xo}+${xs}*.5
+
+# centered
+alias full move ${xo};${yo} ${xs};${ys}
+alias middle-lrg move ${xp05};${yp05} ${xs}*.9;${ys}*.9
+alias middle-med move ${xp1};${yp1} ${xs}*.8;${ys}*.8
+alias middle-sml move ${xp15};${yp15} ${xs}*.7;${ys}*.7
+alias middle-xsml move ${xp2};${yp2} ${xs}*.6;${ys}*.6
+
+# full-height
+alias big-left-half move ${xo};${yo} ${xs}*.8;${ys}
+alias left-half move ${xo};${yo} ${xs}*.5;${ys}
+alias mid-tall move ${xp1};${yo} ${xs}*.8;${ys}
+alias right-half move ${xp5};${yo} ${xs}*.5;${ys}
+alias big-right-half move ${xp2};${yo} ${xs}*.8;${ys}
+
+# corners
+alias bottom-right corner bottom-right 		resize:screenSizeX/2.3;screenSizeY*.75
+alias bottom-right-small corner bottom-right 	resize:screenSizeX/3.5;screenSizeY*.75
+alias bottom-left-small corner bottom-left 	resize:screenSizeX/3.5;screenSizeY*.75
+alias bottom-left corner bottom-left 		resize:screenSizeX/2.3;screenSizeY*.75
+
+alias top-left corner top-left 			resize:screenSizeX/2.3;screenSizeY*.75
+alias top-left-small corner top-left 		resize:screenSizeX/3.5;screenSizeY*.75
+alias top-right-small corner top-right 		resize:screenSizeX/3.5;screenSizeY*.75
+alias top-right corner top-right 		resize:screenSizeX/2.3;screenSizeY*.75
+
+bind =:ctrl;alt;cmd ${full}
+bind -:ctrl;alt;cmd ${middle-lrg}
+bind 0:ctrl;alt;cmd ${middle-med}
+bind 9:ctrl;alt;cmd ${middle-sml}
+bind 8:ctrl;alt;cmd ${middle-xsml}
+
+bind h:ctrl;alt;cmd ${left-half}
+bind j:ctrl;alt;cmd ${big-left-half}
+bind k:ctrl;alt;cmd ${mid-tall}
+bind l:ctrl;alt;cmd ${big-right-half}
+bind ;:ctrl;alt;cmd ${right-half}
+
+bind .:ctrl;alt;cmd ${bottom-right-small}
+bind ,:ctrl;alt;cmd ${bottom-right}
+bind m:ctrl;alt;cmd ${bottom-left}
+bind n:ctrl;alt;cmd ${bottom-left-small}
+
+bind p:ctrl;alt;cmd ${top-right-small}
+bind o:ctrl;alt;cmd ${top-right}
+bind i:ctrl;alt;cmd ${top-left}
+bind u:ctrl;alt;cmd ${top-left-small}
+
+bind up:ctrl;alt;cmd nudge +0 -10
+bind left:ctrl;alt;cmd nudge -10 +0
+bind down:ctrl;alt;cmd nudge +0 +10
+bind right:ctrl;alt;cmd nudge +10 +0
+
+bind w:alt;cmd nudge +0 -10
+bind a:alt;cmd nudge -10 +0
+bind s:alt;cmd nudge +0 +10
+bind d:alt;cmd nudge +10 +0
+
+bind left:cmd;alt push left
+bind right:cmd;alt push right
+bind up:cmd;alt push up
+bind down:cmd;alt push down
+
+bind h:cmd;alt resize -3% +0
+bind j:cmd;alt resize +0 +3% 
+bind k:cmd;alt resize +0 -3% 
+bind l:cmd;alt resize +3% +0
+
+
+# end 
