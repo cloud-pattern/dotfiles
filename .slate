@@ -15,6 +15,7 @@ alias ys screenSizeY
 alias xo screenOriginX
 alias xs screenSizeX
 
+alias yp025 ${yo}+${ys}*.025
 alias yp05 ${yo}+${ys}*.05
 alias yp1 ${yo}+${ys}*.1
 alias yp15 ${yo}+${ys}*.15
@@ -22,6 +23,7 @@ alias yp2 ${yo}+${ys}*.2
 alias yp3 ${yo}+${ys}*.3
 alias yp5 ${yo}+${ys}*.5
 
+alias xp025 ${xo}+${xs}*.025
 alias xp05 ${xo}+${xs}*.05
 alias xp1 ${xo}+${xs}*.1
 alias xp15 ${xo}+${xs}*.15
@@ -31,10 +33,11 @@ alias xp5 ${xo}+${xs}*.5
 
 # centered
 alias full move ${xo};${yo} ${xs};${ys}
-alias middle-lrg move ${xp05};${yp05} ${xs}*.9;${ys}*.9
-alias middle-med move ${xp1};${yp1} ${xs}*.8;${ys}*.8
-alias middle-sml move ${xp15};${yp15} ${xs}*.7;${ys}*.7
-alias middle-xsml move ${xp2};${yp2} ${xs}*.6;${ys}*.6
+alias middle-lrg move ${xp025};${yp025} ${xs}*.95;${ys}*.95
+alias middle-med move ${xp05};${yp05} ${xs}*.9;${ys}*.9
+alias middle-sml move ${xp1};${yp1} ${xs}*.8;${ys}*.8
+alias middle-xsml move ${xp15};${yp15} ${xs}*.7;${ys}*.7
+#alias middle-xxsml move ${xp2};${yp2} ${xs}*.6;${ys}*.6
 
 # full-height
 alias big-left-half move ${xo};${yo} ${xs}*.8;${ys}
