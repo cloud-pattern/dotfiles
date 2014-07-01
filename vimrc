@@ -6,10 +6,10 @@ set ls=2
 
 ""For displaying line numbers on bottom
 set ruler
-
-set nocompatible                " choose no compatibility with legacy vi
 syntax enable
 set encoding=utf-8
+
+set nocompatible                " choose no compatibility with legacy vi
 set showcmd                     " display incomplete commands
 filetype plugin on              " load file type plugins
 filetype indent off             " disable auto indent
@@ -30,10 +30,6 @@ set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
-"" Command maps
-:command NT NERDTree
-:command W w
-
 "" Scrolling
 set scrolloff=8
 set sidescrolloff=15
@@ -44,8 +40,16 @@ set noswapfile
 set nobackup
 set nowb
 
-""Remap change window keys
-map <C-J> <C-W>j<C-W>_
-map <C-K> <C-W>k<C-W>_
-map <C-H> <C-W>h<C-W>_
-map <C-L> <C-W>l<C-W>_
+"" Command maps
+:command NT NERDTree
+:command W w
+noremap <C-n> :NERDTree<CR>
+
+""Remap change window/tab
+noremap <C-j> <C-W><C-W>
+noremap <C-k> :<C-U>tabnext<CR>
+
+
+""Plugin config
+let NERDTreeQuitOnOpen = 1
+

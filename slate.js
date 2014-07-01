@@ -14,6 +14,7 @@ S.cfga({
 
 //bindings + operations
 S.bnda({
+  /*
   //RESIZE ANCHOR TOP LEFT - CTRL
   "l:ctrl" : S.op("resize", { "width" : "+3.5%", "height" : "+0" }),
   "h:ctrl" : S.op("resize", { "width" : "-3.5%", "height" : "+0" }),
@@ -28,7 +29,7 @@ S.bnda({
   "l:ctrl;alt" : S.op("nudge", { "x" : "+2.3%", "y" : "+0" }),
   "h:ctrl;alt" : S.op("nudge", { "x" : "-2.3%", "y" : "+0" }),
   "k:ctrl;alt" : S.op("nudge", { "x" : "+0", "y" : "-1.9%" }),
-  "j:ctrl;alt" : S.op("nudge", { "x" : "+0", "y" : "+1.9%" }),
+  "j:ctrl;alt" : S.op("nudge", { "x" : "+0", "y" : "+1.9%" }), */
   //RESIZE CENTERED - CTRL+ALT
   //{i},{o},{m}
   //EDGE TO EDGE - ALT+CMD
@@ -45,7 +46,7 @@ S.bnda({
   "tab:cmd" : S.op("switch"),
 });
 
-/* */
+/* 
 //RIGHT EDGE TO RIGHT
 slate.bind("l:alt;cmd", function(win) {
     var rect = win.rect();
@@ -56,7 +57,7 @@ slate.bind("l:alt;cmd", function(win) {
         "height" : rect.height+0,
         "anchor" : "top-left"
     });
-});
+});*/
 /*//LEFT EDGE TO LEFT
 //...anchor not working, should i push then resize?
 slate.bind("h:alt;cmd", function(win) {
