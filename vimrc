@@ -32,6 +32,9 @@ set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
+"" Copying
+set clipboard=unnamed
+
 "" Scrolling
 set scrolloff=8
 set sidescrolloff=15
