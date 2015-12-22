@@ -22,7 +22,7 @@ colorscheme desert
 
 "" Whitespace
 set nowrap                      " don't wrap lines
-set tabstop=4 shiftwidth=4      " a tab is 4 spaces 
+set tabstop=2 shiftwidth=2      " a tab is 4 spaces 
 set expandtab                   " use spaces, not tabs 
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
