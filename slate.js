@@ -20,13 +20,13 @@ S.bnda({
   "-:ctrl;alt;cmd" : S.op("move", { "x" : sizeX*.5, "y" : 0, "width" : sizeX*.5, "height" : sizeY, "screen" : monitor_Air }),
 
   "=:ctrl;alt;cmd" : S.op("move", { "x" : 0, "y" : 0, "width" : sizeX, "height" : sizeY, "screen" : monitor_Air }),
-  //NUDGE       U 
+  //NUDGE       U
   "u:ctrl;alt;cmd" : S.op("nudge", { "x" : "-2.3%", "y" : "+0" }),
   "i:ctrl;alt;cmd" : S.op("nudge", { "x" : "+0", "y" : "+1.9%" }),
   "o:ctrl;alt;cmd" : S.op("nudge", { "x" : "+0", "y" : "-1.9%" }),
   "p:ctrl;alt;cmd" : S.op("nudge", { "x" : "+2.3%", "y" : "+0" }),
   //RESIZE      H
-  
+
   //THROW       B
   "b:ctrl;alt;cmd" : S.op("push", { "direction" : "left" }),
   "n:ctrl;alt;cmd" : S.op("push", { "direction" : "down" }),
@@ -50,7 +50,7 @@ slate.bind("k:ctrl;alt;cmd", function(win) { // - vertically bigger
     win.resize({ "width" : rect.width, "height" : rect.height+40 });
     win.move({ "x" : rect.x, "y" : rect.y-20 });
 });
-slate.bind("l:ctrl;alt;cmd", function(win) { // - horizontally bigger 
+slate.bind("l:ctrl;alt;cmd", function(win) { // - horizontally bigger
     var rect = win.rect();
     win.resize({ "width" : rect.width+80, "height" : rect.height });
     win.move({ "x" : rect.x-40, "y" : rect.y });
@@ -62,4 +62,3 @@ slate.bind(".:ctrl;alt;cmd", function(win) { // - center
 });
 
 S.log("finished loading");
-
