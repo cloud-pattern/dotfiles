@@ -1,6 +1,6 @@
 set nocompatible
 
-call pathogen#infect()
+""call pathogen#infect()
 
 "" For displaying filename
 set modeline
