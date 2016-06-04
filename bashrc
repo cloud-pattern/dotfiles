@@ -1,4 +1,13 @@
-# taken from mathiasbynens/dotfiles
+
+#----- load virtualenvwrapper -----#
+source /usr/local/bin/virtualenvwrapper.sh
+
+
+#----- save my bash history -----#
+export PROMPT_COMMAND='if [ "$(id -u)" -ne 0 ]; then echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >> ~/.logs/bash-history-$(date "+%Y-%m-%d").log; fi'
+
+
+#----- prompt taken from mathiasbynens/dotfiles -----#
 prompt_git() {
   local s='';
   local branchName='';
@@ -100,5 +109,3 @@ export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40
 
 alias gs="git status"
 alias gitrm="git diff --diff-filter=D --name-only -z | xargs -0 git rm"
-
-
